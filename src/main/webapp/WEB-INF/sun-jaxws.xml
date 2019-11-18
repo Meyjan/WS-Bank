@@ -7,4 +7,9 @@
             implementation = 'service.Login'
             url-pattern='/service/Login'
     />
+    <endpoint
+            name = 'Transfer'
+            implementation = 'service.Transfer'
+            url-pattern='/service/Transfer'
+    />
 </endpoints>
