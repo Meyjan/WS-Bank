@@ -27,7 +27,7 @@ public class TransactionHistory {
                             + account + " OR account_transaction_tbl.target_account = " 
                             + account + ")";
             String query1 = "SELECT transaction_id, account_transaction_tbl.account_number, target_account, amount, transaction_time " +
-                            "FROM account_transaction_tbl JOIN virtual_accoutn_tbl ON account_transaction_tbl.target_account = virtual_accoutn_tbl.virtual_number WHERE virtual_accoutn_tbl.account_number = " 
+                            "FROM account_transaction_tbl JOIN virtual_account_tbl ON account_transaction_tbl.target_account = virtual_account_tbl.virtual_number WHERE virtual_account_tbl.account_number = " 
                             + account + " AND transaction_type = \"DEBIT\"";
             ResultSet rawResult = st.executeQuery(query);
             ResultSet rawResult1 = st.executeQuery(query1);
@@ -64,7 +64,7 @@ public class TransactionHistory {
                     "jdbc:mariadb://localhost:3306/db_bank_pro", "root", "");
 
             Statement st = conn.createStatement();
-            String query = "SELECT * FROM virtual_accoutn_tbl";
+            String query = "SELECT * FROM virtual_account_tbl";
             ResultSet rawResult = st.executeQuery(query);
 
             while(rawResult.next()) {

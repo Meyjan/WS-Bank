@@ -1,5 +1,8 @@
-example\HelloWorld.class
-data\Account.class
+data\History.class
+service\TransactionHistory.class
 service\Login.class
 service\Transfer.class
 data\BankAccount.class
+example\HelloWorld.class
+data\Account.class
+data\VirtualAccount.class
