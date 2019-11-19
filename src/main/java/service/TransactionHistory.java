@@ -82,7 +82,6 @@ public class TransactionHistory {
     @WebMethod
     public boolean CheckCredit(Integer account, Integer amount, String start, String end) {
         // Processing database
-        boolean result = false;
         try {
             // Getting data from the database
             Class.forName("org.mariadb.jdbc.Driver").newInstance();
