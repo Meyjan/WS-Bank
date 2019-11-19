@@ -3,3 +3,6 @@ C:\Users\Xyz\Desktop\ws-bank\src\main\java\example\HelloWorld.java
 C:\Users\Xyz\Desktop\ws-bank\src\main\java\service\Transfer.java
 C:\Users\Xyz\Desktop\ws-bank\src\main\java\data\Account.java
 C:\Users\Xyz\Desktop\ws-bank\src\main\java\service\Login.java
+C:\Users\Xyz\Desktop\ws-bank\src\main\java\data\VirtualAccount.java
+C:\Users\Xyz\Desktop\ws-bank\src\main\java\data\History.java
+C:\Users\Xyz\Desktop\ws-bank\src\main\java\service\TransactionHistory.java
