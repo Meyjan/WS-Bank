@@ -1,5 +1,6 @@
 package service;    
 import data.BankAccount;
+import data.VirtualAccount;
 
 import java.sql.*;
 import javax.jws.WebMethod;
@@ -7,6 +8,9 @@ import javax.jws.WebService;
 
 @WebService()
 public class Transfer {
+
+    private static final int DEFAULT_VIRTUAL_NUMBER = 100000001;
+
     @WebMethod
     public BankAccount TransferResult(Integer senderAcc, Integer receiverAcc, Integer trfAmount) {
         // Processing database
