@@ -88,10 +88,10 @@ public class TransactionHistory {
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/db_bank_pro", "root", "");
 
             Statement st = conn.createStatement();
-            String query = "SELECT * FROM account_transaction_tbl WHERE amount = " + amount
-                    + " AND transaction_time BETWEEN " + start + " AND " + end + " AND ((account_number = " + account
-                    + " AND transaction_type = \"KREDIT\") OR (target_account = " + account
-                    + " AND transaction_type = \"DEBIT\"))";
+            String query = "SELECT * FROM account_transaction_tbl WHERE amount = " 
+                            + amount + " AND transaction_time BETWEEN '" 
+                            + start + "' AND '" + end + "' AND (target_account = "
+                            + account + " AND transaction_type = \"DEBIT\")";
             ResultSet rawResult = st.executeQuery(query);
 
             if (rawResult.next()) {
