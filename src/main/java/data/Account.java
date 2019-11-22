@@ -45,19 +45,19 @@ public class Account {
         return balance;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setStatus(int newStatus) {
+        this.status = newStatus;
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
+    public void setBalance(int newBalance) {
+        this.balance = newBalance;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int newId) {
+        this.id = newId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String newName) {
+        this.name = newName;
     }
 }

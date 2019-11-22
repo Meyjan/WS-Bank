@@ -8,7 +8,8 @@ import javax.jws.WebService;
 @WebService()
 public class Login {
     @WebMethod
-    public Account AccountLogin(Integer account) {
+    public Account accountLogin(Integer account) {
+
         // Processing database
         Account result = new Account();
         try {
@@ -26,12 +27,10 @@ public class Login {
                 result.setId(rawResult.getInt("id"));
                 result.setName(rawResult.getString("customer_name"));
                 result.setBalance(rawResult.getInt("balance"));
-            }
-            else {
+            } else {
                 result.setStatus(400);
             }
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
         return result;

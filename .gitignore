@@ -1,0 +1,11 @@
+# dependencies
+/.idea
+/.settings
+/.vscode
+/lib
+/bin
+/META-INF
+/out
+/target
+.classpath
+.project

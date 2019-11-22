@@ -45,19 +45,19 @@ public class History {
         return transactiontime;
     }
 
-    public void setAccountNumber(int accountnumber) {
-        this.accountnumber = accountnumber;
+    public void setAccountNumber(int newAccountnumber) {
+        this.accountnumber = newAccountnumber;
     }
 
-    public void setTargetAccount(int targetaccount) {
-        this.targetaccount = targetaccount;
+    public void setTargetAccount(int newTargetaccount) {
+        this.targetaccount = newTargetaccount;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setAmount(int newAmount) {
+        this.amount = newAmount;
     }
 
-    public void setTransactionTime(String transactiontime) {
-        this.transactiontime = transactiontime;
+    public void setTransactionTime(String newTransactiontime) {
+        this.transactiontime = newTransactiontime;
     }
 }

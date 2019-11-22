@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
         "accountnumber",
         "virtualnumber"
 })
-public class VirtualAccount{
+public class VirtualAccount {
     public VirtualAccount() {
         accountnumber = 0;
         virtualnumber = 0;
@@ -29,11 +29,11 @@ public class VirtualAccount{
         return virtualnumber;
     }
 
-    public void setAccountNumber(int accountnumber) {
-        this.accountnumber = accountnumber;
+    public void setAccountNumber(int newAccountnumber) {
+        this.accountnumber = newAccountnumber;
     }
 
-    public void setVirtualNumber(int virtualnumber) {
-        this.virtualnumber = virtualnumber;
+    public void setVirtualNumber(int newVirtualnumber) {
+        this.virtualnumber = newVirtualnumber;
     }
 }
