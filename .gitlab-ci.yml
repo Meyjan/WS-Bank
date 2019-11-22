@@ -21,6 +21,9 @@ deploy:dev:
     - rm -rf ws-bank-1
     - mkdir ws-bank-1
     - git clone git@gitlab.informatika.org:if3110-2019-02-k02-01/ws-bank.git
+    - cd ws-bank
+    - mvn package
+    - cd ~
     - cp ws-bank/target/ws-bank.war ~/ws-bank-1
     - cp ws-bank-res/Dockerfile ~/ws-bank-1
     - cp ws-bank-res/context.xml ~/ws-bank-1
