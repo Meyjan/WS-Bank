@@ -8,9 +8,13 @@
             url-pattern='/service/Login'
     />
     <endpoint
+            name = 'Transfer'
+            implementation = 'service.Transfer'
+            url-pattern='/service/Transfer'
+    />
+    <endpoint
             name = 'TransactionHistory'
             implementation = 'service.TransactionHistory'
             url-pattern='/service/TransactionHistory'
     />
-
 </endpoints>
