@@ -17,8 +17,8 @@ deploy:dev:
   stage: deploy
   script:
     - cd ~
-    - sudo docker container stop gitlab-runner/ws-bank || true
-    - sudo docker container rm gitlab-runner/ws-bank || true
+    - sudo docker container stop /ws-bank || true
+    - sudo docker container rm /ws-bank || true
     - rm -rf ws-bank
     - rm -rf ws-bank-1
     - mkdir ws-bank-1
