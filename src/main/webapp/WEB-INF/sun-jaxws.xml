@@ -12,5 +12,4 @@
             implementation = 'service.TransactionHistory'
             url-pattern='/service/TransactionHistory'
     />
-
 </endpoints>

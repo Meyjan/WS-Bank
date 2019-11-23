@@ -17,8 +17,8 @@ deploy:dev:
   stage: deploy
   script:
     - cd ~
-    - sudo docker stop ws_bank || true
-    - sudo docker rm ws_bank || true
+    - sudo docker container stop gitlab-runner/ws-bank || true
+    - sudo docker container rm gitlab-runner/ws-bank || true
     - rm -rf ws-bank
     - rm -rf ws-bank-1
     - mkdir ws-bank-1
@@ -36,8 +36,7 @@ deploy:dev:
     - sudo docker image pull tomcat:9.0
     - sudo docker image ls
     - sudo docker image build -t gitlab-runner/ws_bank ./
-    - sudo docker container run -it --publish 8080:8080 gitlab-runner/ws_bank
-    - sudo docker container run -it -d --network="host" gitlab-runner/ws_bank
+    - sudo docker container run -it -d --name ws-bank --publish 8080:8080 --network="host" gitlab-runner/ws_bank
   only:
     - master
     # - development
