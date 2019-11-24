@@ -81,6 +81,8 @@ public class TransactionHistory {
 
     @WebMethod
     public boolean CheckCredit(Integer account, Integer amount, String start, String end) {
+        //rekening pemilik bioskop
+        int CINEMA_OWNER = 1; 
         // Processing database
         try {
             // Getting data from the database
@@ -91,7 +93,7 @@ public class TransactionHistory {
             String query = "SELECT * FROM account_transaction_tbl WHERE amount = " 
                             + amount + " AND transaction_time BETWEEN '" 
                             + start + "' AND '" + end + "' AND (target_account = "
-                            + account + " AND transaction_type = \"DEBIT\")";
+                            + CINEMA_OWNER + " AND transaction_type = \"DEBIT\")";
             ResultSet rawResult = st.executeQuery(query);
 
             if (rawResult.next()) {
