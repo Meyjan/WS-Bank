@@ -32,3 +32,5 @@
 - CI / CD : 13517131, 13515116, 13517008
 - Eksplorasi dan setup mesin deployment : 13517131
 - Linting : 13517131, 13515116, 13517008
+
+### WS-BANK     : 54.210.33.100:8080/ws-bank
