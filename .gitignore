@@ -1,0 +1,19 @@
+# dependencies
+/.idea
+/.settings
+/.vscode
+/lib
+/bin
+/META-INF
+/out
+/target/classes
+/target/maven-archiver
+/target/maven-status
+/target/site/
+/target/test-classes
+/target/ws-bank
+/target/checkstyle-cachefile
+/target/checkstyle-checker.xml
+/target/checkstyle-result.xml
+.classpath
+.project

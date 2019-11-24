@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+
+    <endpoint
+            name = 'Login'
+            implementation = 'service.Login'
+            url-pattern='/service/Login'
+    />
+    <endpoint
+            name = 'TransactionHistory'
+            implementation = 'service.TransactionHistory'
+            url-pattern='/service/TransactionHistory'
+    />
+
+</endpoints>

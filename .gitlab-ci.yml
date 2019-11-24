@@ -1,0 +1,43 @@
+# Docker image
+image: tomcat:9.0
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+stages:
+  - test
+  - deploy
+
+lint:
+  stage: test
+  script:
+    - mvn checkstyle:checkstyle
+
+deploy:dev:
+  stage: deploy
+  script:
+    - cd ~
+    - sudo docker container stop /ws-bank || true
+    - sudo docker container rm /ws-bank || true
+    - rm -rf ws-bank
+    - rm -rf ws-bank-1
+    - mkdir ws-bank-1
+    - git clone git@gitlab.informatika.org:if3110-2019-02-k02-01/ws-bank.git
+    - cd ws-bank
+    - git checkout feature/F05-CI_CD
+    - mvn package
+    - cd ~
+    - cp ws-bank/target/ws-bank.war ~/ws-bank-1
+    - cp ws-bank-res/Dockerfile ~/ws-bank-1
+    - cp ws-bank-res/context.xml ~/ws-bank-1
+    - cp ws-bank-res/tomcat-users.xml ~/ws-bank-1
+    - cp ws-bank-res/web.xml ~/ws-bank-1
+    - cd ws-bank-1
+    - sudo docker image pull tomcat:9.0
+    - sudo docker image ls
+    - sudo docker image build -t gitlab-runner/ws_bank ./
+    - sudo docker container run -it -d --name ws-bank --publish 8080:8080 --network="host" gitlab-runner/ws_bank
+  only:
+    - master
+    # - development
+    - feature/F05-CI_CD
